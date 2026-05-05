@@ -1,0 +1,12 @@
+Phase 1 Reflection Answers
+1. How many rows and columns does your dataset have? What does each row represent?
+The dataset contains 4,920 rows and 18 columns. Each row represents a single patient case, recording up to 17 symptoms that the patient is experiencing along with the diagnosed disease. The dataset is perfectly balanced with exactly 120 cases per disease across 41 unique diseases.
+
+2. Are there missing values? If yes, which columns have them and how might this affect your analysis?
+Yes, missing values exist in columns Symptom_5 through Symptom_17, and the number of missing values increases progressively in later symptom columns since not every disease requires many symptoms to be diagnosed. This is expected and intentional rather than a data quality issue, as different diseases have different numbers of identifying symptoms. During analysis we handle this by filtering out null values before processing, ensuring only valid symptoms are used in graph construction and model training.
+
+3. What is the target variable and how many unique classes does it have?
+The target variable is the Disease column, which contains the name of the diagnosed disease that our model aims to predict. It has 41 unique classes ranging from common conditions like Fungal Infection and Common Cold to more serious diseases like Diabetes and Heart Attack. The dataset is perfectly balanced with each disease having exactly 120 samples, which means no class imbalance correction is needed during machine learning phases.
+
+4. Describe the graph you built. What do the nodes and edges represent in the context of your domain?
+The graph was built as an adjacency dictionary where each unique symptom in the dataset represents a node, resulting in 132 nodes total. An edge between two symptom nodes means those two symptoms co-occur together in at least one patient case in the dataset, meaning they have both been observed in the same diagnosed disease. This graph structure is the foundation for Phase 2 search algorithms, where traversing from a set of observed symptoms to a target disease becomes a pathfinding problem with symptoms as states and co-occurrences as transitions.
