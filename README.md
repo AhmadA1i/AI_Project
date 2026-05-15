@@ -4,11 +4,11 @@
 ## Dataset: Track A — Disease Symptom Prediction
 
 ## Team
-| Member | Phase |
-|--------|-------|
-| Ahmad Ali | Phase 1 - Data Foundation|
-| Qandeela  | Phase 2 - Search Algorithms |
-| Mahad  | Phase 3 - CSP |
+| Member | 
+|--------|
+| Ahmad Ali |
+| Qandeela Azhar |
+| Mahad Anwer | 
 
 ## Setup Instructions
 See SETUP.md for full setup guide.
@@ -21,7 +21,6 @@ AL2002-AI-Project/
 ├── phase1_foundation/
 ├── phase2_search/
 ├── phase3_csp/
-├── phase4_logic/
-├── phase5_ml/
-└── phase6_report/
+├── phase4_ml/
+└── phase5_report/
 ```
